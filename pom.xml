@@ -54,7 +54,7 @@
 
 	<properties>
 		<final-name>sforums</final-name>
-		<webapp-directory>../../tomcat/webapps</webapp-directory>
+		<webapp-directory>C:/users/mithun/tomcat/webapps</webapp-directory>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<compiler-plugin-version>3.0</compiler-plugin-version>
 		<war-plugin-version>2.3</war-plugin-version>
