@@ -127,23 +127,23 @@
     <res-auth>Container</res-auth>
     <res-sharing-scope>Unshareable</res-sharing-scope>
   </resource-ref>
-
-<!--   <security-constraint> -->
-<!--     <web-resource-collection> -->
-<!--       <web-resource-name>Modification Actions</web-resource-name> -->
-<!--       <url-pattern>/category_save.html</url-pattern> -->
-<!--       <url-pattern>/category_delete.html</url-pattern> -->
-<!--       <url-pattern>/category_add.html</url-pattern> -->
-<!--       <url-pattern>/category_edit.html</url-pattern> -->
-<!--       <url-pattern>/user_save.html</url-pattern> -->
-<!--       <url-pattern>/user_delete.html</url-pattern> -->
-<!--       <url-pattern>/user_add.html</url-pattern> -->
-<!--       <url-pattern>/user_edit.html</url-pattern> -->
-<!--     </web-resource-collection> -->
-<!--     <auth-constraint> -->
-<!--       <role-name>user</role-name> -->
-<!--     </auth-constraint> -->
-<!--   </security-constraint> -->
+<!-- test -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Modification Actions</web-resource-name>
+      <url-pattern>/category_save.html</url-pattern>
+      <url-pattern>/category_delete.html</url-pattern>
+      <url-pattern>/category_add.html</url-pattern>
+      <url-pattern>/category_edit.html</url-pattern>
+      <url-pattern>/user_save.html</url-pattern>
+      <url-pattern>/user_delete.html</url-pattern>
+      <url-pattern>/user_add.html</url-pattern>
+      <url-pattern>/user_edit.html</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
+    </auth-constraint>
+  </security-constraint>
 
   <login-config>
     <auth-method>BASIC</auth-method>
@@ -157,5 +157,4 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-
 </web-app>

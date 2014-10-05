@@ -2,20 +2,23 @@
 <!DOCTYPE Context [ ]>
 <Context>
 
-<resource-ref>
-     <description>My DB DataSource</description>
-     <res-ref-name>jdbc/sforums</res-ref-name>
-     <res-type>javax.sql.DataSource</res-type>
-     <res-auth>Container</res-auth>
-</resource-ref>
-
-	<Resource name="jdbc/sforums" global="jdbc/sforums"
-		type="javax.sql.DataSource" 
-		driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/sforums"
-		username="root" password="" maxActive="8" maxIdle="4" maxWait="10000"
-		auth="Container" />
+<!-- <resource-ref> -->
+<!--      <description>My DB DataSource</description> -->
+<!--      <res-ref-name>jdbc/sforums</res-ref-name> -->
+<!--      <res-type>javax.sql.DataSource</res-type> -->
+<!--      <res-auth>Container</res-auth> -->
+<!-- </resource-ref> -->
+<!-- 	moved to tomcat/conf/server.xml due to bug with tomcat datasource -->
+<!-- 	<Resource name="jdbc/sforums" global="jdbc/sforums" -->
+<!-- 		type="javax.sql.DataSource"  -->
+<!-- 		driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/sforums" -->
+<!-- 		username="root" password="" maxActive="8" maxIdle="4" maxWait="10000" -->
+<!-- 		auth="Container" /> -->
 <!-- 		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" -->
 <!-- 	For simplicity sake, we are hard coding everyone to be in 'user' role -->
+
+	<ResourceLink name="jdbc/sforums" global="jdbc/sforums"/>
+	
 	<Realm className="org.apache.catalina.realm.DataSourceRealm"
 		dataSourceName="jdbc/sforums" userTable="user" userNameCol="email"
 		userCredCol="passwordDigest" userRoleTable="user" roleNameCol="user"
